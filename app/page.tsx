@@ -1,17 +1,11 @@
 'use client'
 
 import React, { useState } from 'react';
-import { GraduationCap, Target, Users, BookOpen, ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
+import { Target, Users, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
-export default function PeakPrepLanding() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
+export default function HomePage() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const testimonials = [
     {
@@ -31,12 +25,6 @@ export default function PeakPrepLanding() {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thanks for reaching out! We\'ll be in touch soon.');
-  };
-
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
@@ -47,86 +35,6 @@ export default function PeakPrepLanding() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Sticky Header */}
-      <header className="sticky top-0 z-50 bg-[#5B9279] border-b border-[#4a7a63] shadow-sm">
-        <nav className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-2">
-              <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-              <span className="text-xl sm:text-2xl font-bold text-white font-lora">Peak Prep</span>
-            </div>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6">
-              <a href="#services" className="text-white/90 hover:text-white transition-colors">What We Tutor</a>
-              <a href="#remote" className="text-white/90 hover:text-white transition-colors">Why Remote?</a>
-              <a href="#fees" className="text-white/90 hover:text-white transition-colors">Fees</a>
-              <a href="#approach" className="text-white/90 hover:text-white transition-colors">Our Approach</a>
-              
-              {/* Desktop CTA */}
-              <a 
-                href="#contact" 
-                className="bg-white text-[#5B9279] px-4 sm:px-6 py-2 rounded-md hover:bg-gray-100 transition-colors font-medium text-sm sm:text-base ml-2"
-              >
-                Get Started
-              </a>
-            </div>
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-white"
-              aria-label="Toggle menu"
-            >
-              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          {mobileMenuOpen && (
-            <div className="md:hidden pb-4">
-              <div className="flex flex-col space-y-3">
-                <a 
-                  href="#services" 
-                  className="text-white/90 hover:text-white transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  What We Tutor
-                </a>
-                <a 
-                  href="#remote" 
-                  className="text-white/90 hover:text-white transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Why Remote?
-                </a>
-                <a 
-                  href="#fees" 
-                  className="text-white/90 hover:text-white transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Fees
-                </a>
-                <a 
-                  href="#approach" 
-                  className="text-white/90 hover:text-white transition-colors py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Our Approach
-                </a>
-                <a 
-                  href="#contact" 
-                  className="bg-white text-[#5B9279] px-6 py-2 rounded-md hover:bg-gray-100 transition-colors font-medium text-center mt-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Get Started
-                </a>
-              </div>
-            </div>
-          )}
-        </nav>
-      </header>
-
       {/* Hero Section */}
       <section className="relative h-[450px] sm:h-[550px] flex items-end sm:items-center justify-start">
         {/* Background image */}
@@ -154,7 +62,7 @@ export default function PeakPrepLanding() {
                   textShadow: '1px 1px 4px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3)'
                 }}
               >
-                Work Smart,
+                Work Smart.
               </span>
               <span 
                 className="block text-3xl sm:text-5xl md:text-6xl lg:text-7xl" 
@@ -171,24 +79,24 @@ export default function PeakPrepLanding() {
                   textShadow: '1px 1px 4px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.3)'
                 }}
               >
-                Post a good-looking score
+                Post a good-looking score.
               </span>
             </h1>
             
             <div className="mt-6 sm:mt-8">
-              <a 
-                href="#contact" 
+              <Link 
+                href="/get-started" 
                 className="inline-block bg-white text-[#5B9279] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Our Approach Section */}
-      <section id="approach" className="py-10 sm:py-12 -mt-0 sm:-mt-6">
+      <section className="py-10 sm:py-12 -mt-0 sm:-mt-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#6D6661] mb-10 sm:mb-10">
             Our Approach
@@ -207,7 +115,7 @@ export default function PeakPrepLanding() {
                 Active Tutors Leading
               </h3>
               <p className="text-sm sm:text-base text-gray-700">
-                Peak Prep is run by full-time tutors with decades of combined experience. We&apos;re not a massive company—we&apos;re educators first who built the tools we needed to serve students better.
+                Peak Prep is run by two full-time tutors with decades of combined experience. We&apos;re not a massive company—we&apos;re educators first who built the tools we needed to serve students better.
               </p>
             </div>
             <div className="bg-[#EAE6E5] p-6 sm:p-8 rounded-lg">
@@ -223,8 +131,8 @@ export default function PeakPrepLanding() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-12 sm:py-20 bg-[#EAE6E5]">
+      {/* What We Tutor Section */}
+      <section className="py-12 sm:py-20 bg-[#EAE6E5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#6D6661] mb-12 sm:mb-16">
             What We Tutor
@@ -245,51 +153,13 @@ export default function PeakPrepLanding() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Why Remote Section */}
-      <section id="remote" className="py-12 sm:py-20 bg-[#8FCB9B]/10">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#6D6661] mb-6 sm:mb-8">
-            Why Remote Tutoring?
-          </h2>
-          <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm">
-            <p className="text-base sm:text-lg text-gray-700 mb-6">
-              Remote sessions offer much more flexible scheduling and a more lenient cancellation policy. The price is lower—not because the service is lesser, but because commute time isn&apos;t baked into the hourly rate.
-            </p>
-            <p className="text-base sm:text-lg text-gray-700">
-              With remote-only tutoring, our students have been accepted to Yale, Cornell, Columbia, Brown, Duke, Vanderbilt, and many other top institutions.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Fees Section */}
-      <section id="fees" className="py-12 sm:py-20 bg-[#EAE6E5]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#6D6661] mb-6 sm:mb-8">
-            Fees
-          </h2>
-          <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm">
-            <p className="text-base sm:text-lg text-gray-700 mb-6">
-              At Peak Prep, our tutors are not just instructors; they are master strategists with a proven ability to deliver. Investing in Peak Prep means investing in peak performance and a clear path to success.
-            </p>
-            <p className="text-base sm:text-lg text-gray-700 mb-6">
-              For those tackling standardized tests, expect a focused, high-impact approach. Our seasoned professionals typically guide students to mastery in just 12-20 hours. This efficiency isn&apos;t magic; it&apos;s the result of precision teaching, targeted strategies, and a deep understanding of each student&apos;s potential.
-            </p>
-            <p className="text-base sm:text-lg text-gray-700 mb-6">
-              Our hourly rates, ranging from $150 to $400, reflect the caliber of our team—professionals at the height of their craft. This structure allows us to partner with and retain educators who consistently achieve exceptional outcomes, ensuring your commitment empowers your child&apos;s progress.
-            </p>
-            <p className="text-base sm:text-lg text-gray-700 mb-4">
-              Ready for a straightforward conversation about how we can help?
-            </p>
-            <a 
-              href="#contact" 
-              className="inline-block text-[#5B9279] font-semibold hover:text-[#4a7a63] transition-colors underline"
+          <div className="text-center mt-8 sm:mt-12">
+            <Link 
+              href="/what-we-tutor"
+              className="inline-block text-[#5B9279] font-semibold hover:text-[#4a7a63] transition-colors text-base sm:text-lg"
             >
-              Book a free consultation.
-            </a>
+              Learn More →
+            </Link>
           </div>
         </div>
       </section>
@@ -343,112 +213,23 @@ export default function PeakPrepLanding() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
-      <section id="contact" className="py-12 sm:py-20 bg-[#EAE6E5]">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#6D6661] mb-4">
-            Get Started
+      {/* Final CTA Section */}
+      <section className="py-12 sm:py-20 bg-[#5B9279]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">
+            Ready to Get Started?
           </h2>
-          <p className="text-center text-gray-600 mb-8 sm:mb-12 text-sm sm:text-base">
-            Schedule a free consultation to discuss your goals and how we can help.
+          <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8">
+            Schedule a free consultation to discuss your goals and create a personalized test prep plan.
           </p>
-          <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm">
-            <div className="mb-6">
-              <label htmlFor="name" className="block text-sm font-medium text-[#6D6661] mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#5B9279] focus:border-transparent"
-              />
-            </div>
-            <div className="mb-6">
-              <label htmlFor="email" className="block text-sm font-medium text-[#6D6661] mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#5B9279] focus:border-transparent"
-              />
-            </div>
-            <div className="mb-6">
-              <label htmlFor="phone" className="block text-sm font-medium text-[#6D6661] mb-2">
-                Phone (optional)
-              </label>
-              <input
-                type="tel"
-                id="phone"
-                value={formData.phone}
-                onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#5B9279] focus:border-transparent"
-              />
-            </div>
-            <div className="mb-6">
-              <label htmlFor="message" className="block text-sm font-medium text-[#6D6661] mb-2">
-                Tell us about your goals
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                value={formData.message}
-                onChange={(e) => setFormData({...formData, message: e.target.value})}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#5B9279] focus:border-transparent"
-              />
-            </div>
-            <button
-              onClick={handleSubmit}
-              className="w-full bg-[#5B9279] text-white py-3 rounded-md font-semibold hover:bg-[#4a7a63] transition-colors"
-            >
-              Send Message
-            </button>
-          </div>
+          <Link 
+            href="/get-started"
+            className="inline-block bg-white text-[#5B9279] px-8 sm:px-10 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
+          >
+            Book a Free Consultation
+          </Link>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-[#6D6661] text-white py-8 sm:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-[#8FCB9B]" />
-                <span className="text-xl sm:text-2xl font-bold">Peak Prep</span>
-              </div>
-              <p className="text-sm sm:text-base text-gray-300">
-                Expert test prep for ambitious students.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4 text-base sm:text-lg">Quick Links</h3>
-              <ul className="space-y-2 text-sm sm:text-base">
-                <li><a href="#services" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">What We Tutor</a></li>
-                <li><a href="#remote" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">Why Remote</a></li>
-                <li><a href="#fees" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">Fees</a></li>
-                <li><a href="#approach" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">Our Approach</a></li>
-                <li><a href="#contact" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            <div className="sm:col-span-2 md:col-span-1">
-              <h3 className="font-semibold mb-4 text-base sm:text-lg">Student Login</h3>
-              <a 
-                href="https://app.peakprep.tech/login" 
-                className="inline-block bg-[#5B9279] text-white px-6 py-2 rounded-md hover:bg-[#4a7a63] transition-colors text-sm sm:text-base"
-              >
-                Access Student Portal
-              </a>
-            </div>
-          </div>
-          <div className="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300 text-sm">
-            <p>© 2025 Peak Prep. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
