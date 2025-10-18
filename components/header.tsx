@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import { GraduationCap, Menu, X } from 'lucide-react';
+import { Mountain, Menu, X, MountainIcon } from 'lucide-react';
 import Link from 'next/link';
 
 export function Header() {
@@ -12,7 +12,7 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2">
-          <GraduationCap className="h-9 w-9 sm:h-12 sm:w-12 text-white" />
+          <MountainIcon className="h-9 w-9 sm:h-12 sm:w-12 text-white" />
 <span className="text-3xl sm:text-4xl font-bold text-white font-lora">Peak Prep</span>
           </Link>
           

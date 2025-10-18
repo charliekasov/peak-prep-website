@@ -13,7 +13,7 @@ export function Footer() {
               <span className="text-xl sm:text-2xl font-bold">Peak Prep</span>
             </div>
             <p className="text-sm sm:text-base text-gray-300">
-              Expert test prep for ambitious students.
+              Work Smart, Train Hard. Post a Good-Looking Score. 
             </p>
           </div>
           <div>

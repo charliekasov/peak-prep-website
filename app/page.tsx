@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import { Target, Users, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
+import { GraduationCap, BookOpen, Target, Users, Compass, CheckCircle, ChevronLeft, ChevronRight, Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -96,73 +96,129 @@ export default function HomePage() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-10 sm:py-12 -mt-0 sm:-mt-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#6D6661] mb-10 sm:mb-10">
-            Our Approach
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
-            <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#6D6661] mb-4 flex items-center">
-                <Target className="h-5 w-5 sm:h-6 sm:w-6 text-[#5B9279] mr-2" />
-                High-Scorer Focus
-              </h3>
-              <p className="text-sm sm:text-base text-gray-700 mb-6">
-                We specialize in helping strong students reach elite scores. If you&apos;re scoring 1400+ and aiming for 1520+, or have a 30+ ACT and want a 34+, we know how to get you there. These aren&apos;t just incremental improvements—they&apos;re the crucial margins that matter for competitive admissions.
-              </p>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#6D6661] mb-4 flex items-center">
-                <Users className="h-5 w-5 sm:h-6 sm:w-6 text-[#5B9279] mr-2" />
-                Active Tutors Leading
-              </h3>
-              <p className="text-sm sm:text-base text-gray-700">
-                Peak Prep is run by two full-time tutors with decades of combined experience. We&apos;re not a massive company—we&apos;re educators first who built the tools we needed to serve students better.
-              </p>
-            </div>
-            <div className="bg-[#EAE6E5] p-6 sm:p-8 rounded-lg">
-              <h3 className="text-xl sm:text-2xl font-bold text-[#6D6661] mb-4">Distraction-Free Ed-Tech</h3>
-              <p className="text-sm sm:text-base text-gray-700 mb-4">
-                Quality educational technology exists, but too many platforms destroy their value with ads and dopamine-hacking gamification. At a time when focus is becoming a lost art—yet remains crucial for top test scores—we&apos;ve built high-quality skill-building tools with no ads and minimal gamification.
-              </p>
-              <p className="text-sm sm:text-base text-gray-700">
-                We use AI to build better tools and platforms, not to replace human interaction. Our custom software handles logistics so tutors can focus on teaching.
-              </p>
-            </div>
-          </div>
+<section className="py-10 sm:py-12 -mt-0 sm:-mt-6">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#6D6661] mb-10 sm:mb-10">
+      Our Approach
+    </h2>
+    <div className="grid md:grid-cols-3 gap-8 sm:gap-10">
+      {/* Card 1 */}
+      <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm">
+        <div className="flex items-center mb-4">
+          <Users className="h-6 w-6 text-[#5B9279] mr-3" />
+          <h3 className="text-xl sm:text-2xl font-bold text-[#6D6661]">
+            Always Refining Our Craft
+          </h3>
         </div>
-      </section>
+        <p className="text-sm sm:text-base text-gray-700">
+        Through regular mentoring, peer-to-peer workshops, and collaborative curriculum refinement, we maintain the personalized approach of a boutique practice with the depth of a larger institution.
+        </p>
+      </div>
 
-      {/* What We Tutor Section */}
-      <section className="py-12 sm:py-20 bg-[#EAE6E5]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#6D6661] mb-12 sm:mb-16">
-            What We Tutor
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {['SAT', 'ACT', 'SSAT', 'ISEE'].map((test) => (
-              <div 
-                key={test}
-                className="bg-white p-6 sm:p-8 rounded-lg shadow-sm hover:shadow-lg transition-all hover:-translate-y-1"
-              >
-                <div className="w-16 h-16 bg-[#8FCB9B] rounded-lg flex items-center justify-center mb-4">
-                  <BookOpen className="h-8 w-8 text-[#6D6661]" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-[#6D6661] mb-3">{test}</h3>
-                <p className="text-sm sm:text-base text-gray-600">
-                  Comprehensive {test} preparation focusing on strategy, timing, and content mastery for competitive scores.
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-8 sm:mt-12">
-            <Link 
-              href="/what-we-tutor"
-              className="inline-block text-[#5B9279] font-semibold hover:text-[#4a7a63] transition-colors text-base sm:text-lg"
-            >
-              Learn More →
-            </Link>
-          </div>
+      {/* Card 2 */}
+      <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm">
+        <div className="flex items-center mb-4">
+        <Compass className="h-6 w-6 text-[#5B9279] mr-3" />
+          <h3 className="text-xl sm:text-2xl font-bold text-[#6D6661]">
+            We Practice What We Teach
+          </h3>
         </div>
-      </section>
+        <p className="text-sm sm:text-base text-gray-700">
+          Our tutors regularly take the tests they teach. This keeps us connected to what students actually experience—teaching from the trenches, not from memory.
+        </p>
+      </div>
+
+      {/* Card 3 */}
+      <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm">
+        <div className="flex items-center mb-4">
+          <Target className="h-6 w-6 text-[#5B9279] mr-3" />
+          <h3 className="text-xl sm:text-2xl font-bold text-[#6D6661]">
+            Adaptability Over Formula
+          </h3>
+        </div>
+        <p className="text-sm sm:text-base text-gray-700">
+          No two paths through school are the same. We meet students where they are and adapt our strategies to their reality—strong hand or weak hand, we help them play it well.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    {/* What We Tutor Section */}
+<section className="py-12 sm:py-20 bg-[#EAE6E5]">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#6D6661] mb-12 sm:mb-16">
+      What We Tutor
+    </h2>
+    
+    <div className="space-y-8">
+      {/* SAT & ACT Card */}
+      <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+        <div className="flex items-start gap-4 mb-4">
+          <div className="w-16 h-16 bg-[#8FCB9B] rounded-lg flex items-center justify-center flex-shrink-0">
+            <BookOpen className="h-8 w-8 text-[#6D6661]" />
+          </div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#6D6661] pt-3">
+            SAT & ACT
+          </h3>
+        </div>
+        <ul className="space-y-3 ml-20">
+          <li className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
+            <CheckCircle className="h-5 w-5 text-[#5B9279] flex-shrink-0 mt-0.5" />
+            <span>Strategic guidance on which test to take</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
+            <CheckCircle className="h-5 w-5 text-[#5B9279] flex-shrink-0 mt-0.5" />
+            <span>Innovative strategies for the digital format</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
+            <CheckCircle className="h-5 w-5 text-[#5B9279] flex-shrink-0 mt-0.5" />
+            <span>Efficient prep that builds speed and mastery</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
+            <CheckCircle className="h-5 w-5 text-[#5B9279] flex-shrink-0 mt-0.5" />
+            <span>A personalized plan to maximize your score</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* SSAT & ISEE Card */}
+      <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+        <div className="flex items-start gap-4 mb-4">
+          <div className="w-16 h-16 bg-[#8FCB9B] rounded-lg flex items-center justify-center flex-shrink-0">
+            <BookOpen className="h-8 w-8 text-[#6D6661]" />
+          </div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-[#6D6661] pt-3">
+            SSAT & ISEE
+          </h3>
+        </div>
+        <ul className="space-y-3 ml-20">
+          <li className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
+            <CheckCircle className="h-5 w-5 text-[#5B9279] flex-shrink-0 mt-0.5" />
+            <span>Guidance on which test plays to your strengths</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
+            <CheckCircle className="h-5 w-5 text-[#5B9279] flex-shrink-0 mt-0.5" />
+            <span>Rigorous techniques to conquer content quickly</span>
+          </li>
+          <li className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
+            <CheckCircle className="h-5 w-5 text-[#5B9279] flex-shrink-0 mt-0.5" />
+            <span>Test-taking skills that translate to academic success</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div className="text-center mt-8 sm:mt-12">
+      <Link 
+        href="/what-we-tutor"
+        className="inline-block text-[#5B9279] font-semibold hover:text-[#4a7a63] transition-colors text-base sm:text-lg"
+      >
+        Learn More →
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* Testimonials Section */}
       <section className="py-12 sm:py-20">

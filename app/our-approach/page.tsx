@@ -1,41 +1,91 @@
 import React from 'react';
-import { Target, Users } from 'lucide-react';
+import { Target, Users, Compass } from 'lucide-react';
+import Link from 'next/link';
 
 export default function OurApproachPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Our Approach Section */}
-      <section className="py-12 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center text-[#6D6661] mb-12 sm:mb-16">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-[#5B9279] to-[#4a7a63] text-white py-16 sm:py-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
             Our Approach
           </h1>
-          <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
-            <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-[#6D6661] mb-4 flex items-center">
-                <Target className="h-5 w-5 sm:h-6 sm:w-6 text-[#5B9279] mr-2" />
-                High-Scorer Focus
+          <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto">
+            We stay sharp. You get results.
+          </p>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="py-12 sm:py-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Section 1 */}
+          <div className="mb-12 sm:mb-16">
+            <div className="flex items-center mb-4">
+              <Users className="h-8 w-8 text-[#5B9279] mr-4" />
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#6D6661]">
+                Always Refining Our Craft
               </h2>
-              <p className="text-sm sm:text-base text-gray-700 mb-6">
-                We specialize in helping strong students reach elite scores. If you&apos;re scoring 1400+ and aiming for 1520+, or have a 30+ ACT and want a 34+, we know how to get you there. These aren&apos;t just incremental improvements—they&apos;re the crucial margins that matter for competitive admissions.
+            </div>
+            <div className="prose prose-lg max-w-none text-gray-700">
+              <p className="mb-4 text-base sm:text-lg">
+                Peak Prep was founded by veteran educator Charlie Kasov and is comprised of a small collaborative team of elite tutors. We're not a large company where tutors just teach from a prep textbook, nor are we a solo practice where one voice dominates.
               </p>
-              <h2 className="text-xl sm:text-2xl font-bold text-[#6D6661] mb-4 flex items-center">
-                <Users className="h-5 w-5 sm:h-6 sm:w-6 text-[#5B9279] mr-2" />
-                Active Tutors Leading
-              </h2>
-              <p className="text-sm sm:text-base text-gray-700">
-                Peak Prep is run by two full-time tutors with decades of combined experience. We&apos;re not a massive company—we&apos;re educators first who built the tools we needed to serve students better.
+              <p className="text-base sm:text-lg">
+                Through regular mentoring, peer-to-peer workshops, and collaborative curriculum refinement, we maintain the personalized approach of a boutique practice with the depth of a larger institution.
               </p>
             </div>
-            <div className="bg-[#EAE6E5] p-6 sm:p-8 rounded-lg">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#6D6661] mb-4">Distraction-Free Ed-Tech</h2>
-              <p className="text-sm sm:text-base text-gray-700 mb-4">
-                Quality educational technology exists, but too many platforms destroy their value with ads and dopamine-hacking gamification. At a time when focus is becoming a lost art—yet remains crucial for top test scores—we&apos;ve built high-quality skill-building tools with no ads and minimal gamification.
+          </div>
+
+          {/* Section 2 */}
+          <div className="mb-12 sm:mb-16 bg-[#EAE6E5] p-6 sm:p-8 rounded-lg">
+            <div className="flex items-center mb-4">
+              <Compass className="h-8 w-8 text-[#5B9279] mr-4" />
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#6D6661]">
+                We Practice What We Teach
+              </h2>
+            </div>
+            <div className="prose prose-lg max-w-none text-gray-700">
+              <p className="mb-4 text-base sm:text-lg">
+                Our tutors regularly take the tests they teach. Every few months, we sit for full practice exams to stay sharp and connected to what students experience.
               </p>
-              <p className="text-sm sm:text-base text-gray-700">
-                We use AI to build better tools and platforms, not to replace human interaction. Our custom software handles logistics so tutors can focus on teaching.
+              <p className="text-base sm:text-lg">
+                This isn't just professional development—it's how we maintain empathy for the pressure, fatigue, and mental challenges our students face. We teach from the trenches, not from memory.
               </p>
             </div>
+          </div>
+
+          {/* Section 3 */}
+          <div className="mb-12 sm:mb-16">
+            <div className="flex items-center mb-4">
+              <Target className="h-8 w-8 text-[#5B9279] mr-4" />
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#6D6661]">
+                Adaptability Over Formula
+              </h2>
+            </div>
+            <div className="prose prose-lg max-w-none text-gray-700">
+              <p className="mb-4 text-base sm:text-lg">
+                Everyone knows no two students are the same. But here's what matters more: no two paths through school are the same. Life happens. Plans shift. A student who's been coasting can catch fire. One who's been excelling can hit turbulence. If the initial approach or tutor match isn't working, we adjust.
+              </p>
+              <p className="text-base sm:text-lg">
+                We don't rely on rigid formulas because real progress requires meeting students where they are, not where we wish they were. Strong hand or weak hand, we help them play it well.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12 sm:mt-16 p-8 bg-[#8FCB9B]/10 rounded-lg">
+            <h3 className="text-2xl font-bold text-[#6D6661] mb-6">
+              Ready to Get Started?
+            </h3>
+            <Link 
+              href="/get-started" 
+              className="inline-block bg-[#5B9279] text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-[#4a7a63] transition-all hover:scale-105 shadow-lg"
+            >
+              Book a Free Consultation
+            </Link>
           </div>
         </div>
       </section>
