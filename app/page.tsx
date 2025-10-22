@@ -273,16 +273,13 @@ export default function HomePage() {
       <section className="py-12 sm:py-20 bg-[#5B9279]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 sm:mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8">
-            Schedule a free consultation to discuss your goals and create a personalized test prep plan.
-          </p>
-          <Link 
-            href="/get-started"
-            className="inline-block bg-white text-[#5B9279] px-8 sm:px-10 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
-          >
-            Book a Free Consultation
+          Ready to Get Started?
+    </h2>
+    <Link 
+      href="/get-started"
+      className="inline-block bg-white text-[#5B9279] px-8 sm:px-10 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
+    >
+      Book a Free Consultation
           </Link>
         </div>
       </section>

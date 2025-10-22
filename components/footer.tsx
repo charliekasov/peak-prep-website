@@ -19,32 +19,32 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4 text-base sm:text-lg">Quick Links</h3>
             <ul className="space-y-2 text-sm sm:text-base">
-              <li>
-                <Link href="/what-we-tutor" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">
-                  What We Tutor
-                </Link>
-              </li>
-              <li>
-                <Link href="/why-remote" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">
-                  Why Remote
-                </Link>
-              </li>
-              <li>
-                <Link href="/fees" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">
-                  Fees
-                </Link>
-              </li>
-              <li>
-                <Link href="/our-approach" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">
-                  Our Approach
-                </Link>
-              </li>
-              <li>
-                <Link href="/get-started" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+  <li>
+    <Link href="/our-approach" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">
+      Our Approach
+    </Link>
+  </li>
+  <li>
+    <Link href="/what-we-tutor" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">
+      What We Tutor
+    </Link>
+  </li>
+  <li>
+    <Link href="/fees" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">
+      Fees
+    </Link>
+  </li>
+  <li>
+    <Link href="/our-tools" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">
+      Our Tools
+    </Link>
+  </li>
+  <li>
+    <Link href="/get-started" className="text-gray-300 hover:text-[#8FCB9B] transition-colors">
+      Contact
+    </Link>
+  </li>
+</ul>
           </div>
           <div className="sm:col-span-2 md:col-span-1">
             <h3 className="font-semibold mb-4 text-base sm:text-lg">Student Login</h3>

@@ -41,7 +41,7 @@ export default function WhatWeTutorPage() {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-[#5B9279] flex-shrink-0 mt-1" />
                   <div>
-                    <strong>Strategic guidance on SAT vs. ACT</strong> — We help you choose the right test based on your strengths, then build a personalized plan to maximize your score from any baseline.
+                    <strong>Strategic guidance on which test to take</strong> — We help you identify which exam plays to your strengths and build a personalized plan to maximize your score.
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -54,6 +54,12 @@ export default function WhatWeTutorPage() {
                   <CheckCircle className="h-6 w-6 text-[#5B9279] flex-shrink-0 mt-1" />
                   <div>
                     <strong>Efficient prep that builds speed and mastery</strong> — We focus on high-impact strategies and targeted practice to close content gaps while building test-taking stamina.
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-[#5B9279] flex-shrink-0 mt-1" />
+                  <div>
+                    <strong>A personalized plan to maximize your score</strong> — We meet you at your current baseline and map the most efficient path to your target score.
                   </div>
                 </div>
               </div>
@@ -79,19 +85,19 @@ export default function WhatWeTutorPage() {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-[#5B9279] flex-shrink-0 mt-1" />
                   <div>
-                    <strong>Guidance on which test fits your target schools</strong> — Different schools accept different tests. We help you understand your options and why keeping flexibility matters in the application process.
+                    <strong>Guidance on which test plays to your strengths</strong> — We help you understand the differences between SSAT and ISEE and determine which format suits your child best.
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-[#5B9279] flex-shrink-0 mt-1" />
                   <div>
-                    <strong>Rigorous techniques to master content quickly</strong> — From vocabulary to reading comprehension to quantitative reasoning, we use proven methods to help students learn efficiently and retain what they've learned.
+                    <strong>Rigorous techniques to conquer content quickly</strong> — We use proven methods to help students master vocabulary, reading comprehension, and quantitative reasoning efficiently.
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-[#5B9279] flex-shrink-0 mt-1" />
                   <div>
-                    <strong>Test-taking skills that translate to academic success</strong> — The strategies and confidence students build for SSAT/ISEE translate directly to future success on the SAT and ACT, giving them a head start on college admissions.
+                    <strong>Test-taking skills that translate to academic success</strong> — The strategies students build preparing for SSAT/ISEE carry forward directly to high school coursework and future SAT/ACT prep.
                   </div>
                 </div>
               </div>

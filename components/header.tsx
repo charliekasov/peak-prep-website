@@ -17,28 +17,28 @@ export function Header() {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            <Link href="/what-we-tutor" className="text-white/90 hover:text-white transition-colors">
-              What We Tutor
-            </Link>
-            <Link href="/why-remote" className="text-white/90 hover:text-white transition-colors">
-              Why Remote?
-            </Link>
-            <Link href="/fees" className="text-white/90 hover:text-white transition-colors">
-              Fees
-            </Link>
-            <Link href="/our-approach" className="text-white/90 hover:text-white transition-colors">
-              Our Approach
-            </Link>
-            
-            {/* Desktop CTA */}
-            <Link 
-              href="/get-started" 
-              className="bg-white text-[#5B9279] px-4 sm:px-6 py-2 rounded-md hover:bg-gray-100 transition-colors font-medium text-sm sm:text-base ml-2"
-            >
-              Get Started
-            </Link>
-          </div>
+<div className="hidden md:flex items-center space-x-6">
+  <Link href="/our-approach" className="text-white/90 hover:text-white transition-colors">
+    Our Approach
+  </Link>
+  <Link href="/what-we-tutor" className="text-white/90 hover:text-white transition-colors">
+    What We Tutor
+  </Link>
+  <Link href="/fees" className="text-white/90 hover:text-white transition-colors">
+    Fees
+  </Link>
+  <Link href="/our-tools" className="text-white/90 hover:text-white transition-colors">
+    Our Tools
+  </Link>
+  
+  {/* Desktop CTA */}
+  <Link 
+    href="/get-started" 
+    className="bg-white text-[#5B9279] px-4 sm:px-6 py-2 rounded-md hover:bg-gray-100 transition-colors font-medium text-sm sm:text-base ml-2"
+  >
+    Get Started
+  </Link>
+</div>
 
           {/* Mobile menu button */}
           <button
@@ -51,47 +51,47 @@ export function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden pb-4">
-            <div className="flex flex-col space-y-3">
-              <Link 
-                href="/what-we-tutor" 
-                className="text-white/90 hover:text-white transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                What We Tutor
-              </Link>
-              <Link 
-                href="/why-remote" 
-                className="text-white/90 hover:text-white transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Why Remote?
-              </Link>
-              <Link 
-                href="/fees" 
-                className="text-white/90 hover:text-white transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Fees
-              </Link>
-              <Link 
-                href="/our-approach" 
-                className="text-white/90 hover:text-white transition-colors py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Our Approach
-              </Link>
-              <Link 
-                href="/get-started" 
-                className="bg-white text-[#5B9279] px-6 py-2 rounded-md hover:bg-gray-100 transition-colors font-medium text-center mt-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        )}
+{mobileMenuOpen && (
+  <div className="md:hidden pb-4">
+    <div className="flex flex-col space-y-3">
+      <Link 
+        href="/our-approach" 
+        className="text-white/90 hover:text-white transition-colors py-2"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Our Approach
+      </Link>
+      <Link 
+        href="/what-we-tutor" 
+        className="text-white/90 hover:text-white transition-colors py-2"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        What We Tutor
+      </Link>
+      <Link 
+        href="/fees" 
+        className="text-white/90 hover:text-white transition-colors py-2"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Fees
+      </Link>
+      <Link 
+        href="/our-tools" 
+        className="text-white/90 hover:text-white transition-colors py-2"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Our Tools
+      </Link>
+      <Link 
+        href="/get-started" 
+        className="bg-white text-[#5B9279] px-6 py-2 rounded-md hover:bg-gray-100 transition-colors font-medium text-center mt-2"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Get Started
+      </Link>
+    </div>
+  </div>
+)}
       </nav>
     </header>
   );
